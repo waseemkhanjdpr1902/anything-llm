@@ -1,3 +1,11 @@
+# SayItLLM
+
+SayItLLM is a branded fork of [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm), developed upstream by Mintplex Labs. The original MIT licence and attribution are retained.
+
+The underlying application features are retained; model providers, credentials and hosting must be configured. Multi-user and website embedding require the appropriate server/Docker deployment. This branding change does not include deployment, subscription billing or separate desktop/mobile builds. Upstream instructions and links below refer to the original project.
+
+---
+
 <a name="readme-top"></a>
 
 > [!NOTE]
