@@ -4,11 +4,17 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { defaultNS, resources } from "./locales/resources";
 
 i18next
+  .use({
+    type: "postProcessor",
+    name: "sayitllmBrand",
+    process: (value) => value.replace(/AnythingLLM/g, "SayItLLM"),
+  })
   // https://github.com/i18next/i18next-browser-languageDetector/blob/9efebe6ca0271c3797bc09b84babf1ba2d9b4dbb/src/index.js#L11
   .use(initReactI18next) // Initialize i18n for React
   .use(LanguageDetector)
   .init({
     fallbackLng: "en",
+    postProcess: ["sayitllmBrand"],
     debug: import.meta.env.DEV,
     defaultNS,
     resources,
